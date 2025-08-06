@@ -1,103 +1,79 @@
-import Image from "next/image";
+import AboutMandateSection from "@/components/AboutMandateSection";
+import HeroSection from "@/components/HeroSection";
+import CommissionerSection from "@/components/CommissionerSection";
+import QuickLinksSection from "@/components/QuickLinksSection";
+import SkillUpSection from "@/components/SkillUpSection";
+import LatestNewsSection from "@/components/LatestNewsSection";
+import Stats from "@/components/Stats";
+import FeaturedPartners from "@/components/FeaturedPartners";
+import CTASection from "@/components/CTASection";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+     
+      {/* hero section */}
+      <HeroSection
+          backgroundImages={["/images/road4.png", "/images/road3.png", "/images/road2.png"]}
+
+  overlayText="Imo State Ministry of Rural Development and Economic Empowerment"
+  heading="Empowering Communities."
+  subheading=""
+  description="Building resilient rural communities, promoting grassroots development, and creating inclusive economic opportunities for Imo citizens through strategic empowerment programs."
+/>
+
+{/* About Mandate Section */}
+<AboutMandateSection
+  label="ABOUT US"
+  title="Our Mandate —"
+  subheading="Ministry of Rural Development and Economic Empowerment"
+  description="Welcome to the Imo State Ministry of Rural Development and Economic Empowerment. 
+As a pivotal agency for sustainable growth and poverty reduction, our Ministry champions the development of rural infrastructure, skills acquisition, and microenterprise promotion to uplift every corner of Imo State. 
+
+We are dedicated to empowering rural communities, fostering self-reliance, and enhancing access to basic amenities through strategic partnerships, innovation, and community-led initiatives. 
+
+Through focused policies and actionable programs, we create enabling environments for agriculture, local entrepreneurship, and cooperative growth—ensuring that no community is left behind."
+  buttonText="Discover More"
+  image1="/images/rural1.png"
+  image2="/images/road3.png"
+/>
+
+{/* Commissioner Section */}
+<CommissionerSection
+  imageSrc="/images/commisioner.png"
+  imageAlt="Hon. Ifeanyi Demian Oruh, Commissioner for Rural Development and Economic Empowerment in Imo State"
+  title="About The Commissioner"
+  bio="Honourable Ifeanyi Demian Oruh from Imo State serves as the Honourable Commissioner for Rural Development and Economic Empowerment. Appointed in June 2024, he is responsible for leading strategic interventions that drive rural infrastructure, community livelihood, and youth empowerment across the state." 
+  details="In his role, Hon. Oruh spearheads programs under the ‘One Kindred, One Business (OKOBI)’ initiative, encouraging each of Imo State’s 655 autonomous communities to identify and develop business opportunities they can own and collectively benefit from. He collaborates with local leaders, cooperative groups, and development partners to ensure rural transformation through infrastructure, enterprise development, and inclusive economic policies. His leadership aligns with Governor Uzodimma’s agenda for rehabilitation, reconstruction, and recovery in grassroots communities." 
+/>
+
+
+<div className="bg-white">
+  {/* Skill Up Section */}
+  <SkillUpSection />
+  {/* Quick Links Section */}
+  <QuickLinksSection />
+  {/* Latest News Section */}
+  <LatestNewsSection />
+</div>
+
+{/* Stats Section */}
+<Stats />
+{/* Featured Partners Section */}
+<FeaturedPartners />
+{/* CTASection */}
+<CTASection
+  heading="Join Us in Transforming Rural Communities and Empowering Citizens"
+  subtext="Partner with us in building a stronger, more inclusive Imo State—where rural development fuels economic prosperity for all."
+  buttonLabel="Contact Us"
+  buttonHref="/contact-us"
+/>
+{/* Footer */}
+<Footer />
+
+   
+    </>
   );
 }
