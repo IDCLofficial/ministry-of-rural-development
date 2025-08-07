@@ -45,8 +45,8 @@ export default function MediaPage() {
   return (
     <main className="min-h-screen w-full bg-[#F7F9FA] flex flex-col">
       <MediaHeroSection
-        title="Empowering Rural Communities in Imo State"
-        subtitle="Browse through our gallery of initiatives, media coverage, and community engagements showcasing our efforts to uplift rural areas across Imo State."
+        title="Empowering Rural Communities."
+        subtitle="Browse through our gallery."
         backgroundImage="/images/gradient.png"
         searchBar={<MediaSearchBar placeholder="Search media..." onSearch={setSearch} />}
       />
