@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from 'next/link';
+import AnimatedSection from "./AnimatedSection";
 
 export default function SkillUpSection() {
   return (
@@ -12,9 +13,13 @@ export default function SkillUpSection() {
       </div>
       {/* Right: Text and Buttons */}
       <div className="w-[90%] md:w-[55%] flex-1 flex flex-col justify-center items-start max-w-2xl px-2 min-h-0">
+      <AnimatedSection>
+      
       <h2 className="text-xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">
           The Okobi Initiative: Redefining Rural Development in Imo State
         </h2>
+        </AnimatedSection>
+        <AnimatedSection>
         
         <p className="text-gray-500 text-sm md:text-md lg:text-lg mb-8 max-w-[700px]">
           The <strong>Okobi Initiative</strong>, pioneered by the Imo Ministry of Rural Development, stands as a gold standard in rural transformation and sustainable empowerment. 
@@ -26,7 +31,7 @@ export default function SkillUpSection() {
           The Okobi Initiative is not just a success story; it’s a legacy in the making.
         </p>
 
-
+        </AnimatedSection>
         <div className="flex flex-row gap-4 mt-4 overflow-x-auto whitespace-nowrap pb-2">
           <Link href="/about" style={{paddingTop: '.5rem', paddingBottom: '.5rem'}} className="bg-green-700 hover:bg-green-800 text-white font-semibold px-8 py-2 rounded text-lg transition-colors min-w-[140px] text-center">
             See More

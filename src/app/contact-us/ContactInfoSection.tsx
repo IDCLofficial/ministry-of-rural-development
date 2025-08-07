@@ -3,7 +3,7 @@ import { FaMapMarkerAlt, FaEnvelope, FaPhone, FaFacebookF, FaTwitter, FaInstagra
 
 const contactInfo = {
   address: "Block 7, New Owerri Secretariat 460281",
-  email: "",
+  email: "unavailable",
   phone: "+234 803 564 3563",
   socials: [
     { icon: <FaFacebookF />, href: "#" },
@@ -22,11 +22,11 @@ const ContactInfoSection = () => (
       <li className="flex items-center gap-2 text-gray-800"><FaEnvelope /> <span>{contactInfo.email}</span></li>
       <li className="flex items-center gap-2 text-gray-800"><FaPhone /> <span>{contactInfo.phone}</span></li>
     </ul>
-    <div className="flex gap-4 mt-2">
+    {/* <div className="flex gap-4 mt-2">
       {contactInfo.socials.map((s, i) => (
         <a key={i} href={s.href} className="text-gray-700 hover:text-green-700 text-xl" target="_blank" rel="noopener noreferrer">{s.icon}</a>
       ))}
-    </div>
+    </div> */}
   </div>
 );
 

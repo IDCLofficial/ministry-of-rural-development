@@ -55,7 +55,7 @@ const info = {
             href: "/"
         },
         {
-            label: "Nil",
+            label: "Phone number: +234 803 564 3563",
             href: "#"
         },  
         {
