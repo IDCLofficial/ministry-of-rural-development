@@ -22,7 +22,7 @@ export default function AboutMandateSection({
   image2,
 }: AboutMandateSectionProps) {
   return (
-<section className={`relative w-full p-8 py-20 bg-[url('/images/gradient.png')] bg-no-repeat bg-cover shadow-lg overflow-hidden`}>
+<section className={`relative w-full p-2 md:p-8 py-20 bg-[url('/images/gradient.png')] bg-no-repeat bg-cover shadow-lg overflow-hidden`}>
       
       <div className="w-[96%] md:w-[94%] mx-auto">
         {/* top section */}
