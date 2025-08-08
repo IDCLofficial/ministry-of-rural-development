@@ -7,7 +7,7 @@ import { useState } from "react";
 
 const info = {
     logo: "/images/IMSG-Logo.svg",
-    ministry: "Ministry of Rural Development and Economic Empowerment",
+    ministry: "Rural Development and Economic Empowerment",
     description: "The Ministry of Rural Development and Economic Empowerment was created by the administration of His Excellency, Distinguished Senator Hope Uzodinma: the Governor of Imo State to facilitate the transformation of Imo State ",
     quickLinks: [
         {
@@ -55,12 +55,12 @@ const info = {
             href: "/"
         },
         {
-            label: "Phone number: +234 803 564 3563",
-            href: "#"
+            label: "Phone number: +2347035488297",
+            href: "tel:+2347035488297"
         },  
         {
-            label: "imostatemgvg@gmail.com",
-            href: "mailto:imostatemgvg@gmail.com"
+            label: "",
+            href: ""
         },
     ]
 }

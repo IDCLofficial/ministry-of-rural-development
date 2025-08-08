@@ -1,6 +1,7 @@
 import Image from "next/image";
 import NewsHeroSection from "./NewsHeroSection";
 import NewsBodySection from "./NewsBodySection";
+import Link from "next/link";
 
 const latestNews = [
   {
@@ -115,7 +116,10 @@ export default function NewsDetailPage() {
       {/* Section 2: Latest News */}
       <div className="w-full bg-[#181c23] py-10">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-white text-xl font-semibold mb-6">
+        <Link href="/news" className="bg-green-600 text-white px-6 py-2 m-4">
+        Go back to news
+        </Link>
+          {/* <h2 className="text-white text-xl font-semibold mb-6">
             LATEST NEWS
           </h2>
           <div className="flex flex-col md:flex-row gap-6">
@@ -140,7 +144,7 @@ export default function NewsDetailPage() {
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
