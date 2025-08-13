@@ -58,7 +58,7 @@ export default function NewsDetailPage() {
             <div className="w-full flex justify-center my-8">
               <div className="w-full max-w-md rounded-xl overflow-hidden">
                 <Image
-                  src="/images/imo_rural_agropreneurs.jpg"
+                  src="/images/okobi5.png"
                   alt="Rural Training Session"
                   width={600}
                   height={300}
