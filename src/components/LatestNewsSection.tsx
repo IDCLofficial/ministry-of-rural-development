@@ -1,43 +1,35 @@
 import Image from "next/image";
 import Link from "next/link";
-const news = [
-  {
-    title: "Imo State Launches Renewed Hope Empowerment Scheme Under Ministry of Rural Development & Economic Empowerment",
-    description:
-      "Imo State launched the Renewed Hope Agenda empowerment scheme in June 2025, offering vocational training and startup grants to over 2,000 rural youths and women across multiple LGAs.",
-    date: "July 2025",
-    image: "/images/okobi6.png",
-  },
-  {
-    title: "Ministry Partners with NDDC & IFAD to Boost Agricultural and Economic Empowerment",
-    description:
-      "The Ministry joined forces with NDDC and IFAD in July 2025 to roll out a comprehensive rural livelihood programme across riverine and rural LGAs of Imo State.",
-    date: "June 2025",
-    image: "/images/rural1.png",
-  },
-  {
-    title: "OKOBI Summit Held at KOMU: Students’ Club and Grant Awards Launch",
-    description:
-      "At the OKOBI summit held in May 2025 at Kingsley Ozumba Mbadiwe University, Ideato (KOMU), Prof. Kenneth Amaeshi inaugurated the OKOBI Students’ Club and awarded startup grants (₦2M–₦3M) to selected kindred businesses.",
-    date: "May 2025",
-    image: "/images/okobi1.png",
-  },
-];
+import AnimatedSection from "./AnimatedSection";
+import { getNewsList } from "@/app/news/newsData";
 
+export default async function LatestNewsSection() {
+  // Fetch latest 3 news items
+  const news = await getNewsList();
+  const latestNews = news.slice(0, 3); // Show only the 3 most recent news items
+  if (!latestNews || latestNews.length === 0) {
+    return (
+      <section className="w-full py-12 px-4 flex flex-col items-center">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-10">Latest News</h2>
+        <p className="text-gray-500 text-lg">No news available at the moment. Please check back later.</p>
+      </section>
+    );
+  }
 
-export default function LatestNewsSection() {
   return (
     <section className="w-full py-12 px-4 flex flex-col items-center">
       <h2 className="text-4xl md:text-5xl font-bold text-center mb-10">Latest News</h2>
+      <AnimatedSection> 
       <div className="flex flex-col md:flex-row gap-8 w-full max-w-7xl justify-center mb-8">
-        {news.map((item, idx) => (
-          <div
+        {latestNews.map((item, idx) => (
+          <Link
             key={idx}
-            className="bg-white rounded-2xl border border-gray-200 shadow-sm flex flex-col w-full max-w-md p-0 overflow-hidden transition hover:shadow-md"
+            href={`/news/${item.slug}`}
+            className="bg-white rounded-2xl border border-gray-200 shadow-sm flex flex-col w-full max-w-md p-0 overflow-hidden transition-all duration-300 ease-in-out transform hover:shadow-lg hover:-translate-y-1"
           >
             <div className="w-full h-64 relative">
               <Image
-                src={item.image}
+                src={item.image || '/images/default.jpg'}
                 alt={item.title}
                 fill
                 className="object-cover rounded-t-2xl"
@@ -50,11 +42,12 @@ export default function LatestNewsSection() {
               <p className="text-gray-500 text-base mb-6">{item.description}</p>
               <div className="mt-auto font-bold text-black text-base">{item.date}</div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
+      </AnimatedSection>
       <Link href="/news">
-        <p className="bg-green-700 animate-bounce hover:bg-green-800 text-white font-semibold px-12 py-3 rounded text-lg transition-colors text-center block">See More</p>
+        <button className="bg-green-700 animate-bounce hover:bg-green-800 text-white font-semibold px-12 py-3 rounded text-lg transition-colors">See More</button>
       </Link>
     </section>
   );
