@@ -230,7 +230,7 @@ export default function Footer() {
         </AnimatedSection>
       </div>
         <div className="border-t border-gray-200 text-center py-3 text-xs text-gray-500">
-        Copyright © {new Date().getFullYear()} Imo State Ministry of Water Resources. All rights reserved. Powered by{' '}
+        Copyright © {new Date().getFullYear()} Imo State Ministry of Rural Development and Economic Empowerment. All rights reserved. Powered by{' '}
         <a 
           href="http://imodigitalcity.com" 
           target="_blank" 
